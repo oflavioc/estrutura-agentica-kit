@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "descricao": "Toolchain do produto, validada pelo env_doctor.py (stage 0) ANTES de qualquer suíte. `require` ausente/abaixo do mínimo = FAIL (aborta o pipeline); `optional` ausente = WARN nomeado (as suítes dependentes declaram NÃO EXECUTADO, nunca SKIP silencioso). python>=3.10 e git são validados sempre, sem declaração. Campos por entrada: cmd (obrigatório), min (versão mínima, opcional), version_args (default --version), nota (aparece na mensagem)."
+  },
+  "require": [],
+  "optional": []
+}

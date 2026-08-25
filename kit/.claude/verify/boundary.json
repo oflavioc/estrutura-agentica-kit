@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "descricao": "Manifesto de boundary (R6). Classes de proteção com o rito que autoriza mudança. Consumido por guard-boundary.sh (bloqueio em tempo de edição), check_boundary.py (stage do pipeline) e compliance-audit.sh (deny coerente). PREENCHIMENTO: liste em cada classe os paths (relativos à raiz, com /) e escreva o rito em uma frase imperativa — é ela que o hook mostra ao negar. Espelhe cada path em permissions.deny (Edit+Write) no settings.json. As seções `produto` e `dados` parametrizam guard-tdd e guard-data: produto.globs = padrões fnmatch dos módulos de produto que exigem red provado (vazio = guard-tdd desativado, Ondas 0–2); dados.sensiveis/excecoes = padrões de arquivo sensível barrados no commit e suas exceções nominais.",
+    "onda": 0
+  },
+  "classes": {
+    "frozen": {
+      "rito": "Mudança SÓ pelo rito definido na R1 ({{RITO_DA_SUPERFICIE_CONGELADA}}).",
+      "paths": []
+    },
+    "generated": {
+      "rito": "Nunca editado à mão. Regenerado exclusivamente por {{BUILDER}}; o stage build prova identidade byte a byte.",
+      "paths": []
+    },
+    "legacy": {
+      "rito": "Congelado até reconciliação formal. A fonte de identidade é .claude/verify/pins.json. Nunca editar.",
+      "paths": []
+    },
+    "registry": {
+      "rito": "Regenerado exclusivamente por gen_pins.py, no mesmo PR que altera qualquer arquivo pinado, com motivo no commit.",
+      "paths": [
+        ".claude/verify/pins.json"
+      ]
+    }
+  },
+  "produto": {
+    "globs": []
+  },
+  "dados": {
+    "sensiveis": [],
+    "excecoes": []
+  }
+}

@@ -1,0 +1,5 @@
+# Onda 0 — determinismo por construção (R7).
+# Todo texto é LF no blob E no working tree, em qualquer plataforma.
+# Lição de origem: sem isto, checkout Windows converte CRLF e hashes pinados
+# "falham" em massa sem nenhuma divergência real.
+* text=auto eol=lf
